@@ -16,7 +16,7 @@
 \usepackage{indentfirst}
 \usepackage{xpatch}
 \usepackage{setspace}
-\usepackage{times} 
+\usepackage{times}
 %\usepackage{slashbox}
 \usepackage{enumitem}
 \usepackage{gensymb}
@@ -43,7 +43,7 @@
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks=true,
-	linkcolor=RoyalBlue,      
+	linkcolor=RoyalBlue,
 	urlcolor=RoyalBlue,
 	citecolor=RoyalBlue,
 	citebordercolor=0 0 1
@@ -98,13 +98,13 @@
 \fancypagestyle{firstpage}{
 \fancyhf{}
 \fancyhead[L]{Control Systems and Optimization Letters, Vol. 2, No 1, 2024\\
-ISSN: 2985-6116, DOI: 10.59247/csol.vxix.xx}
-\fancyhead[R]{\thepage}          
+ISSN: -, DOI: -}
+\fancyhead[R]{\thepage}
 %\fancyfoot[L]{\includegraphics{open_access}}
 \fancyfoot[C]{\footnotesize This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see \url{https://creativecommons.org/licenses/by/4.0/}
 }
 %\fancyfoot[R]{Journal Email: jrc@umy.ac.id}
-\renewcommand{\footrulewidth}{0.7pt} 
+\renewcommand{\footrulewidth}{0.7pt}
 \renewcommand{\headrulewidth}{0.7pt}
 }
 
@@ -113,7 +113,7 @@ ISSN: 2985-6116, DOI: 10.59247/csol.vxix.xx}
 \fancyhead[L]{\color{black}Control Systems and Optimization Letters, Vol. 2, No 1, 2024}
 %\fancyhead[C]{ISSN: 2715-5072}
 \fancyhead[R]{\color{black}\thepage}
-\fancyfoot[C]{\small  First Author Name (Title)}
+\fancyfoot[C]{\parbox[t]{\textwidth}{\centering\footnotesize Rizky Amelia (Comparative Evaluation of YOLOv8-OBB and YOLO11-OBB for Oriented Ship Detection in Sentinel-1 SAR Imagery of the Makassar Strait)}}
 \renewcommand{\headrulewidth}{0.7pt}
 \renewcommand{\footrulewidth}{0.7pt}
 }
@@ -138,17 +138,16 @@ ISSN: 2985-6116, DOI: 10.59247/csol.vxix.xx}
 \title{\textcolor{RoyalBlue}{Comparative Evaluation of YOLOv8-OBB and YOLO11-OBB for Oriented Ship Detection in Sentinel-1 SAR Imagery of the Makassar Strait}
 }
 
-\author{\small Author \textsuperscript{1} , Author \textsuperscript{2} , Author \textsuperscript{3} , Author \textsuperscript{4} , Author \textsuperscript{5,*}
+\author{\small Rizky Amelia\textsuperscript{1}, Andi Zalfa Zahirah Najib\textsuperscript{2},Dicha Wijaya Kusuma\textsuperscript{3}, Rahmahdaniah Fitri\textsuperscript{4}, Mahardika Arka\textsuperscript{5}
 	\\
-	\textsuperscript{1, 2, 3, 4, 5} Department of Electrical Engineering, Universitas Ahmad Dahlan, Yogyakarta, Indonesia\\
-	Email: \textsuperscript{1} author@email, \textsuperscript{2} author@email, \textsuperscript{3} author@email, \textsuperscript{4} author@email, \textsuperscript{5} author@email\\
-	Orcid: \textsuperscript{1} Orcid URL, \textsuperscript{2} Orcid URL, \textsuperscript{3} Orcid URL, \textsuperscript{4} Orcid URL, \textsuperscript{5} Orcid URL\\
-	*Corresponding Author}
+	\textsuperscript{1, 2, 3, 4, 5} Faculty of Science and Information Technology, Kalimantan Institute of Technology, Balikpapan, Indonesia\\
+	Email: \textsuperscript{1} \mbox{rizky.amelia@lecturer.itk.ac.id}, \textsuperscript{2} \mbox{11231010@student.itk.ac.id},\textsuperscript{3} \mbox{11231020@student.itk.ac.id},\\
+	\textsuperscript{4} \mbox{11231084@student.itk.ac.id}, \textsuperscript{5} \mbox{11231037@student.itk.ac.id}}
 
 \maketitle
 
 \begin{abstract}
-Monitoring vessel activity along the Indonesian Archipelagic Sea Lane II, of which the Makassar Strait is a principal corridor, requires observations that do not depend on daylight, cloud-free conditions, or cooperative reporting by ships. Spaceborne synthetic aperture radar provides such observations, but automatic ship detection in radar images is hampered by speckle, sea clutter, small target size, and arbitrary ship orientation. This study presents a controlled comparison of two oriented bounding box detectors, YOLOv8n-OBB and YOLO11n-OBB, for ship detection in Sentinel-1 imagery, and evaluates both models on Sentinel-1 data of the Makassar Strait labeled by the authors. Both models were trained and evaluated on the Dual-Polarimetric SAR Ship Detection Dataset, which contains 1,236 image chips with 3,416 ship instances annotated with rotated boxes, using identical data splits, input sizes, training schedules, augmentation settings, and hardware. Detection quality was measured with precision, recall, F1-score, mAP at an intersection over union threshold of 0.5, and mAP averaged over thresholds from 0.5 to 0.95, while efficiency was measured with parameter count, computational cost, and inference speed. On the DSSDD test set, YOLO11n-OBB reached an mAP@50:95 of 0.825 against 0.812 for YOLOv8n-OBB, with 13.8\% fewer parameters and 20.5\% fewer FLOPs. On the Makassar Strait data, evaluated against 458 author-annotated ships, YOLOv8n-OBB had the higher recall (0.876 against 0.828) and YOLO11n-OBB the higher precision (0.902 against 0.863). Neither model was clearly superior across datasets, and both lost about 9--11 F1-score points and 19--20 mAP@50:95 points when the models trained on DSSDD were applied to the Makassar Strait.
+Monitoring vessel activity along the Indonesian Archipelagic Sea Lane II, of which the Makassar Strait is a principal corridor, requires observations that do not depend on daylight, cloud-free conditions, or cooperative reporting by ships. Spaceborne synthetic aperture radar provides such observations, but automatic ship detection in radar images is hampered by speckle, sea clutter, small target size, and arbitrary ship orientation. This study presents a controlled comparison of two oriented bounding box detectors, YOLOv8n-OBB and YOLO11n-OBB, for ship detection in Sentinel-1 imagery, and evaluates both models on 255 tiles from ten Sentinel-1 acquisitions of the Makassar Strait labeled by the authors. Both models were trained and evaluated on the Dual-Polarimetric SAR Ship Detection Dataset, which contains 1,236 image chips with 3,416 ship instances annotated with rotated boxes, using identical data splits, input sizes, training schedules, augmentation settings, and hardware. Detection quality was measured with precision, recall, F1-score, mAP at an intersection over union threshold of 0.5, and mAP averaged over thresholds from 0.5 to 0.95, while efficiency was measured with parameter count, computational cost, and inference speed. On the DSSDD test set, YOLO11n-OBB reached an mAP@50:95 of 0.825 against 0.812 for YOLOv8n-OBB, with 13.8\% fewer parameters and 20.5\% fewer FLOPs. On the Makassar Strait data, evaluated against 458 author-annotated ships, YOLOv8n-OBB had the higher recall (0.876 against 0.828) and YOLO11n-OBB the higher precision (0.902 against 0.863). Neither model was clearly superior across datasets, and both lost about 9--11 F1-score points and 19--20 mAP@50:95 points when the models trained on DSSDD were applied to the Makassar Strait.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -183,12 +182,12 @@ Two practical questions remain open for applying OBB detectors to maritime monit
 % TODO: validate this gap against a full literature search before submission.
 
 % P10 -- contributions
-This study addresses these questions through a comparative experimental evaluation of YOLOv8n-OBB and YOLO11n-OBB for ship detection in Sentinel-1 SAR images. The contributions of this paper are as follows: (1) both models are trained and evaluated on DSSDD under a consistent experimental protocol; (2) their performance is compared in terms of precision, recall, F1-score, mAP@50, mAP@50:95, model complexity, and inference speed; (3) a procedure aligned with DSSDD is described that converts Sentinel-1 SLC data into dual-polarization pseudo-color tiles, so that models trained on DSSDD can be applied to a new area; and (4) both models are applied to a Sentinel-1 acquisition of the Makassar Strait within ALKI II, and their detections are evaluated against oriented bounding boxes created by the authors and analyzed through inter-model agreement and visual inspection. The remainder of this paper is organized as follows. Section II describes the data, models, and experimental protocol; Section III presents and discusses the results; and Section IV concludes the paper.
+This study addresses these questions through a comparative experimental evaluation of YOLOv8n-OBB and YOLO11n-OBB for ship detection in Sentinel-1 SAR images. The contributions of this paper are as follows: (1) both models are trained and evaluated on DSSDD under a consistent experimental protocol; (2) their performance is compared in terms of precision, recall, F1-score, mAP@50, mAP@50:95, model complexity, and inference speed; (3) a procedure aligned with DSSDD is described that converts Sentinel-1 SLC data into dual-polarization pseudo-color tiles, so that models trained on DSSDD can be applied to a new area; and (4) both models are applied to ten Sentinel-1 acquisitions of the Makassar Strait within ALKI II, and their detections are evaluated against oriented bounding boxes created by the authors on 255 tiles. The remainder of this paper is organized as follows. Section II describes the data, models, and experimental protocol; Section III presents and discusses the results; and Section IV concludes the paper.
 
 %=================================================================
 \section{METHODS}
 \subsection{Research Workflow}
-The research workflow is shown in \textcolor{RoyalBlue}{Fig.} \ref{fig:workflow}. It consists of two branches. In the benchmark branch, DSSDD is converted into the YOLO-OBB annotation format, split into training, validation, and test subsets, and used to train and evaluate both models under the same protocol. In the application branch, Sentinel-1 data of the Makassar Strait are preprocessed into the same input representation, tiled, and passed to both trained models, after which the detections are merged, evaluated against labels created by the authors, and analyzed.
+The research workflow is shown in \textcolor{RoyalBlue}{Fig.} \ref{fig:workflow}. It consists of two branches. In the benchmark branch, DSSDD is converted into the YOLO-OBB annotation format, split into training, validation, and test subsets, and used to train and evaluate both models under the same protocol. In the application branch, ten Sentinel-1 acquisitions of the Makassar Strait are preprocessed into the same input representation and tiled, and both trained models are evaluated on 255 tiles against reference annotations created by the authors.
 
 \begin{figure}[h]
 	\centering
@@ -201,13 +200,13 @@ The research workflow is shown in \textcolor{RoyalBlue}{Fig.} \ref{fig:workflow}
 		\node[box, below=of p] (t) {Training of both OBB models\\ (identical protocol)};
 		\node[box, below=of t] (e) {Evaluation: P, R, F1, mAP@50,\\ mAP@50:95, params, FLOPs, FPS};
 		\node[box, below=of e] (c) {Model comparison};
-		\node[box, right=of d] (s) {Sentinel-1 SLC data,\\ Makassar Strait (ALKI II)};
+		\node[box, right=of d] (s) {10 Sentinel-1 SLC acquisitions,\\ Makassar Strait (ALKI II)};
 		\node[box, below=of s] (sp) {Preprocessing and\\ tiling ($256 \times 256$)};
 		\node[box, below=of sp] (i) {Inference with both\\ trained models};
-		\node[box, below=of i] (m) {Tile merging and\\ rotated NMS};
-		\node[box, below=of m] (a) {Evaluation and analysis};
+		\node[box, below=of i] (n) {Annotation of 255 tiles};
+		\node[box, below=of n] (a) {Evaluation against\\ reference annotations};
 		\draw[arr] (d) -- (p); \draw[arr] (p) -- (t); \draw[arr] (t) -- (e); \draw[arr] (e) -- (c);
-		\draw[arr] (s) -- (sp); \draw[arr] (sp) -- (i); \draw[arr] (i) -- (m); \draw[arr] (m) -- (a);
+		\draw[arr] (s) -- (sp); \draw[arr] (sp) -- (i); \draw[arr] (i) -- (n); \draw[arr] (n) -- (a);
 		\draw[arr] (t.east) -- (i.west);
 	\end{tikzpicture}
 	\caption{Research workflow of this study.}
@@ -215,7 +214,7 @@ The research workflow is shown in \textcolor{RoyalBlue}{Fig.} \ref{fig:workflow}
 \end{figure}
 
 \subsection{Dataset}
-DSSDD \cite{hu2021dssdd} was constructed from 50 Sentinel-1 interferometric wide-swath SLC images acquired in VV and VH polarizations. The images were cropped into 1,236 chips of $256 \times 256$ pixels. The released rotated annotations contain 3,416 ship instances, 2,277 in the official training set and 1,139 in the official test set. Each ship is annotated with both a rotated bounding box and a horizontal bounding box, and the chips are provided as pseudo-color images that encode the polarimetric information. Only the rotated annotations are used in this study. Other SAR ship datasets with rotated annotations include the Rotated-SARShip dataset \cite{xu2022rssd} and the multi-source LMRD \cite{cheng2026lmrd}. DSSDD is used here because its dual-polarization chips are derived from Sentinel-1 SLC data. The main properties of the dataset are summarized in \textcolor{RoyalBlue}{Table} \ref{tab:dataset}. The chips are divided into 685 training, 171 validation, and 380 test chips, and the same split is used for both models. \tbd{State how the split is built, e.g. the official DSSDD test set with validation chips drawn from the official training set using random seed 42. Confirm after retraining.}
+DSSDD \cite{hu2021dssdd} was constructed from 50 Sentinel-1 interferometric wide-swath SLC images acquired in VV and VH polarizations. The images were cropped into 1,236 chips of $256 \times 256$ pixels. The DSSDD paper reports 3,540 ship targets \cite{hu2021dssdd}; counting the rotated boxes in the released annotation files gives 3,416 instances, 2,277 in the training folder and 1,139 in the test folder of the dataset repository. Each ship is annotated with both a rotated bounding box and a horizontal bounding box, and the chips are provided as pseudo-color images that encode the polarimetric information. Only the rotated annotations are used in this study. Other SAR ship datasets with rotated annotations include the Rotated-SARShip dataset \cite{xu2022rssd} and the multi-source LMRD \cite{cheng2026lmrd}. DSSDD is used here because its dual-polarization chips are derived from Sentinel-1 SLC data. The main properties of the dataset are summarized in \textcolor{RoyalBlue}{Table} \ref{tab:dataset}. The chips are divided into 685 training, 171 validation, and 380 test chips, and the same split is used for both models. The 380 test chips are those of the test folder, and the 856 chips of the training folder are divided into the 685 training and 171 validation chips.
 \begin{table}[h!]
 	\centering
 	\caption{SUMMARY OF THE DSSDD DATASET}
@@ -240,22 +239,29 @@ DSSDD \cite{hu2021dssdd} was constructed from 50 Sentinel-1 interferometric wide
 \end{table}
 
 \subsection{Study Area and Sentinel-1 Data}
-The study area is the Makassar Strait between Kalimantan and Sulawesi, which forms the northern part of ALKI II \cite{yulia2023}. Sentinel-1 data covering the strait were obtained from the Copernicus data space. The acquisition used in this study is listed in \textcolor{RoyalBlue}{Table} \ref{tab:scenes}. It is an interferometric wide-swath SLC product, the same product type from which DSSDD was built. The interferometric wide-swath mode is acquired with the terrain observation by progressive scans (TOPS) technique \cite{dezan2006}, so each subswath consists of bursts that have to be merged during preprocessing. All nine bursts of subswath IW1 were processed, covering approximately $117.97^{\circ}$--$119.07^{\circ}$\,E and $0.36^{\circ}$--$2.05^{\circ}$\,S. Subswaths IW2 and IW3 were not processed.
+The study area is the Makassar Strait between Kalimantan and Sulawesi, which forms the northern part of ALKI II \cite{yulia2023}. The external test set was built from ten Sentinel-1 acquisitions obtained from the Copernicus data space, three from Sentinel-1C and seven from Sentinel-1D, acquired between 2 July and 18 September 2026 (\textcolor{RoyalBlue}{Table} \ref{tab:scenes}). The interferometric wide-swath (IW) mode used by DSSDD is acquired with the terrain observation by progressive scans (TOPS) technique \cite{dezan2006}, so each subswath consists of bursts that have to be merged during preprocessing. The subswaths and bursts covering the study area were selected during the TOPSAR split of each scene.
 
 \begin{table}[h!]
 	\centering
-	\caption{SENTINEL-1 ACQUISITION OF THE MAKASSAR STRAIT}
+	\caption{SENTINEL-1 ACQUISITIONS AND ANNOTATED TILES OF THE MAKASSAR STRAIT}
 	\begin{footnotesize}
-	\begin{tabular}{ll}
+	\setlength{\tabcolsep}{4pt}
+	\begin{tabular}{cllcrr}
 		\hline
-		\textbf{Property} & \textbf{Value} \\
+		\textbf{Scene} & \textbf{Satellite} & \textbf{Date (2026)} & \textbf{Time (UTC)} & \textbf{Tiles} & \textbf{Ships} \\
 		\hline
-		Satellite & Sentinel-1D \\
-		Acquisition date & 16 November 2026 \\
-		Acquisition time (UTC) & 21:50:32--21:50:59 \\
-		Mode and product & IW, SLC \\
-		Polarization & VV and VH \\
-		Processed area & IW1, 9 bursts \\
+		01 & Sentinel-1C & 25 Aug & 21:42:01 & 5 & 5 \\
+		02 & Sentinel-1C & 6 Sep & 21:42:51 & 8 & 9 \\
+		03 & Sentinel-1C & 18 Sep & 21:42:02 & 7 & 7 \\
+		04 & Sentinel-1D & 2 Jul & 21:43:03 & 6 & 6 \\
+		05 & Sentinel-1D & 7 Jul & 21:50:48 & 52 & 87 \\
+		06 & Sentinel-1D & 31 Jul & 21:50:30 & 57 & 102 \\
+		07 & Sentinel-1D & 23 Aug & 10:25:45 & 8 & 8 \\
+		08 & Sentinel-1D & 24 Aug & 21:50:32 & 61 & 111 \\
+		09 & Sentinel-1D & 31 Aug & 21:43:31 & 3 & 3 \\
+		10 & Sentinel-1D & 17 Sep & 21:50:08 & 48 & 120 \\
+		\hline
+		\multicolumn{4}{l}{Total} & 255 & 458 \\
 		\hline
 	\end{tabular}
 	\label{tab:scenes}
@@ -273,12 +279,12 @@ The rotated annotations of DSSDD are converted into the YOLO-OBB format, in whic
 \end{equation}
 where $(\delta_{x,i}, \delta_{y,i}) \in \{(-1,-1), (1,-1), (1,1), (-1,1)\}$ for $i = 1, \dots, 4$, and $\theta$ is given in radians. The normalized coordinates are clipped to the range $[0, 1]$.
 
-The Sentinel-1 data of the study area are processed with ESA SNAP 14.0.0 following a procedure aligned with DSSDD, in which the variances and covariance of the VV and VH polarizations form the three channels of a pseudo-color image \cite{hu2021dssdd}. SNAP-based pipelines are an established way to preprocess Sentinel-1 SLC data \cite{weiss2022sensarp}. The steps are TOPSAR split of subswath IW1, application of the orbit file \tbd{state whether SNAP used the precise or the restituted orbit; check the SNAP log, because precise orbits are published about three weeks after acquisition}, radiometric calibration with complex output, TOPSAR deburst, generation of the $2 \times 2$ polarimetric covariance matrix $C_2$, and multilooking with four range looks and one azimuth look, giving a pixel spacing of approximately $9.3$\,m $\times$ $14$\,m (slant range $\times$ azimuth). No terrain correction is applied, so the product remains in SAR geometry, and no land mask is applied. Second-order polarimetric descriptors are also used to analyze dual-polarization Sentinel-1 data \cite{mascolo2022}, and combinations of the VH and VV channels have been used to enhance small ships in Sentinel-1 images \cite{shin2024,shin2025}. The pseudo-color image uses $C_{22}$, $C_{11}$, and $|C_{12}|$ as the red, green, and blue channels, where $C_{22}$ and $C_{11}$ are taken to represent the VH and VV intensities, respectively. The assignment of $C_{11}$ to VV and $C_{22}$ to VH was inferred from the median sea intensity and was not confirmed from the product metadata. Each channel value $a$ is quantized linearly to 8 bits as
+Each of the ten acquisitions is processed independently with ESA SNAP 14.0.0 following a procedure aligned with DSSDD, in which the variances and covariance of the VV and VH polarizations form the three channels of a pseudo-color image \cite{hu2021dssdd}. SNAP-based pipelines are an established way to preprocess Sentinel-1 SLC data \cite{weiss2022sensarp}. The steps are TOPSAR split of the selected subswaths, application of the orbit file, radiometric calibration with complex output, TOPSAR deburst, generation of the $2 \times 2$ polarimetric covariance matrix $C_2$, and multilooking with four range looks and one azimuth look, giving a pixel spacing of approximately $9.3$\,m $\times$ $14$\,m (slant range $\times$ azimuth). No terrain correction is applied, so the product remains in SAR geometry, and no land mask is applied. Second-order polarimetric descriptors are also used to analyze dual-polarization Sentinel-1 data \cite{mascolo2022}, and combinations of the VH and VV channels have been used to enhance small ships in Sentinel-1 images \cite{shin2024,shin2025}. The pseudo-color image uses $C_{22}$, $C_{11}$, and $|C_{12}|$ as the red, green, and blue channels, where $C_{22}$ and $C_{11}$ are taken to represent the VH and VV intensities, respectively. The assignment of $C_{11}$ to VV and $C_{22}$ to VH was not verified against the product metadata. Each channel value $a$ is quantized linearly to 8 bits as
 \begin{equation}
 	q = \left\lfloor 255 \cdot \min\!\left( \max\!\left( \frac{a}{a_{max}}, 0 \right), 1 \right) \right\rfloor,
 	\label{eq:quant}
 \end{equation}
-where the upper limit $a_{max}$ in (\ref{eq:quant}) is $0.0737$ for the red, $0.3266$ for the green, and $0.0757$ for the blue channel. \tbd{Document how these limits were estimated from three DSSDD samples, including the comparison between the 16-bit and 8-bit data.} Because the number of looks, the channel assignment, and the quantization limits are reconstructed, the representation approximates that of DSSDD and is not guaranteed to be identical. The processed image of $5{,}304 \times 12{,}228$ pixels is divided into $256 \times 256$ tiles with a stride of 192 pixels, which gives a nominal overlap of 64 pixels so that ships on tile borders are not lost. Tiles with less than 99\% valid pixels are discarded, leaving 1,550 tiles.
+where the upper limit $a_{max}$ in (\ref{eq:quant}) is $0.0737$ for the red, $0.3266$ for the green, and $0.0757$ for the blue channel. The limits were estimated from three DSSDD samples and averaged for each channel to approximate the 8-bit quantization of DSSDD. Because the number of looks, the channel assignment, and the quantization limits are reconstructed, the representation approximates that of DSSDD and is not guaranteed to be identical. The processed images are divided into $256 \times 256$ tiles, the chip size of DSSDD. Splitting high-resolution images into slices is a common way to detect objects in large scenes \cite{ge2024}. The test set consists of 255 tiles, each containing at least one ship; no negative tiles are included.
 
 \subsection{Detection Models}
 YOLOv8 \cite{yolov8} uses a CSP-based backbone built from C2f modules and a spatial pyramid pooling fast (SPPF) block, a neck that combines feature pyramid and path aggregation structures, and an anchor-free decoupled head. YOLO11 \cite{yolo11} retains this overall structure but replaces the C2f modules with C3k2 blocks and adds a C2PSA block with position-sensitive spatial attention after the SPPF layer. In the OBB variants of both models, the detection head predicts an additional rotation angle for each box, so that the output is a rotated rectangle instead of a horizontal one. Both models are initialized from the OBB weights released by Ultralytics, which were pretrained on the DOTA dataset \cite{xia2018dota}. The nano scale is used for both models (YOLOv8n-OBB and YOLO11n-OBB), with a single output class, ship.
@@ -293,8 +299,6 @@ where $\mathcal{L}_{box}$ is the rotated box regression loss, $\mathcal{L}_{cls}
 \subsection{Experimental Setup}
 To ensure a fair comparison, both models are trained with identical settings, listed in \textcolor{RoyalBlue}{Table} \ref{tab:train}. The same random seed, data split, augmentation pipeline, and hardware are used, and the checkpoint with the best validation mAP@50:95 is used for testing. The $256 \times 256$ chips are upsampled to $640 \times 640$ pixels. The augmentation consists of mosaic (disabled during the last 10 epochs), translation (0.1), scaling (0.5), horizontal flipping (probability 0.5), hue, saturation, and value jitter (0.015, 0.7, 0.4), and blur, median blur, grayscale conversion, and contrast-limited adaptive histogram equalization, each with probability 0.01.
 
-% Values below are from the first training runs. Re-check them against the
-% logs after retraining (pin ultralytics==8.4.215 to keep them valid).
 \begin{table}[h!]
 	\centering
 	\caption{TRAINING CONFIGURATION (IDENTICAL FOR BOTH MODELS)}
@@ -303,7 +307,8 @@ To ensure a fair comparison, both models are trained with identical settings, li
 		\hline
 		\textbf{Setting} & \textbf{Value} \\
 		\hline
-		Framework & Ultralytics 8.4.215, PyTorch 2.14.1 \\
+		Framework (training) & Ultralytics 8.4.202, PyTorch 2.11.0 \\
+		Framework (evaluation) & Ultralytics 8.4.218, PyTorch 2.14.1 \\
 		Input size & $640 \times 640$ pixels \\
 		Epochs & 100 \\
 		Batch size & 16 \\
@@ -312,7 +317,8 @@ To ensure a fair comparison, both models are trained with identical settings, li
 		Weight decay & 0.0005 \\
 		Augmentation & Default Ultralytics pipeline \\
 		Random seed & 42 \\
-		Hardware & NVIDIA Tesla T4 (Google Colab) \\
+		Training hardware & NVIDIA L4 (Google Colab) \\
+		Evaluation hardware & NVIDIA L4 (DSSDD test); CPU (Makassar) \\
 		Initialization & Ultralytics OBB weights pretrained on DOTA \\
 		\hline
 	\end{tabular}
@@ -352,32 +358,15 @@ The integral in (\ref{eq:ap}) is evaluated with 101-point interpolation. Because
 where $t_{pre}$, $t_{inf}$, and $t_{post}$ are the preprocessing, inference, and postprocessing times per image in milliseconds.
 
 \subsection{Application to the Makassar Strait}
-Both trained models are applied to the tiles of the study area at an input size of $640 \times 640$ pixels with a confidence threshold of 0.25 and a per-tile non-maximum suppression threshold of 0.7. Detections are mapped back to image coordinates, and duplicates from overlapping tiles are merged with rotated non-maximum suppression at a ProbIoU threshold of 0.5. The approximate latitude and longitude of each detection are obtained by bilinear interpolation of the tie-point grids of the SAR product. Merging overlapping image slices can leave redundant oriented boxes that standard non-maximum suppression does not resolve \cite{ge2024}, so the merged detections are also inspected visually. Detections of the two models are considered to agree when their ProbIoU exceeds 0.3. Sentinel-1 ship detections can be cross-compared with AIS data \cite{pelich2019}. No AIS data are used in this work. Instead, reference annotations for the study area were created by the authors as oriented bounding boxes, and the detections are evaluated against them with the metrics in Section II-G. The analysis also covers detection counts, confidence values, inter-model agreement, and visual inspection. \tbd{Describe the annotation tool and procedure, whether the labels were prepared independently of the model predictions, how they were verified, and the thresholds used for this evaluation.}
+Both trained models are applied to the 255 annotated tiles of the study area, which are upsampled from $256 \times 256$ to $640 \times 640$ pixels as for DSSDD, and evaluated with the metrics in Section II-G, using a confidence threshold of 0.001 and a non-maximum suppression threshold of 0.5. Example detections are displayed at a confidence threshold of 0.25. Sentinel-1 ship detections can be cross-compared with AIS data \cite{pelich2019}. No AIS data are used in this work. Instead, reference annotations for the study area were created by the authors as oriented bounding boxes, and the detections are evaluated against them.
 
 %=================================================================
 \section{RESULTS AND DISCUSSION}
-\subsection{SAR Image Preprocessing Results}
-The preprocessing of subswath IW1 produced the elements of the covariance matrix $C_2$, namely $C_{11}$, the real and imaginary parts of $C_{12}$, and $C_{22}$, as images of $5{,}304 \times 12{,}228$ pixels, from which 1,550 valid tiles were obtained. \textcolor{RoyalBlue}{Table} \ref{tab:preproc} lists the statistics of the two diagonal elements, estimated from a subsample of the nonzero pixels, together with the corresponding 8-bit values after quantization with (\ref{eq:quant}). The median of $C_{11}$ is about five times that of $C_{22}$. This is consistent with assigning $C_{11}$ to the co-polarized VV channel and $C_{22}$ to the cross-polarized VH channel, because the sea surface normally backscatters more strongly in the co-polarized channel. After quantization, both medians map to values below 10 and both 99th percentiles remain below 65, so typical pixels appear dark and most of the 8-bit range remains available for bright targets. \textcolor{RoyalBlue}{Fig.} \ref{fig:qual} and \textcolor{RoyalBlue}{Fig.} \ref{fig:extqual} show examples of DSSDD and Makassar Strait chips, respectively, for visual comparison.
-
-\begin{table}[h!]
-	\centering
-	\caption{INTENSITY STATISTICS OF THE PROCESSED IW1 DATA}
-	\begin{footnotesize}
-	\setlength{\tabcolsep}{5pt}
-	\begin{tabular}{lcccc}
-		\hline
-		\textbf{Element} & \textbf{Median} & \textbf{99th}& \textbf{8-bit med.} & \textbf{8-bit 99th} \\
-		\hline
-		$C_{11}$ (green) & $9.74 \times 10^{-3}$ & $7.99 \times 10^{-2}$ & 7 & 62 \\
-		$C_{22}$ (red) & $1.94 \times 10^{-3}$ & $6.94 \times 10^{-3}$ & 6 & 24 \\
-		\hline
-	\end{tabular}
-	\label{tab:preproc}
-	\end{footnotesize}
-\end{table}
+\subsection{Makassar Strait Test Set}
+The external test set contains 255 annotated tiles with 458 reference ships from the ten acquisitions listed in Table \ref{tab:scenes}. Every tile contains at least one ship, so there are no negative tiles. \textcolor{RoyalBlue}{Fig.} \ref{fig:qual} and \textcolor{RoyalBlue}{Fig.} \ref{fig:extqual} show examples of DSSDD and Makassar Strait chips, respectively, for visual comparison.
 
 \subsection{Model Training and Convergence}
-\textcolor{RoyalBlue}{Fig.} \ref{fig:curves} shows the training and validation losses of both models over 100 epochs, computed as the sum of the box, classification, and distribution focal losses. The angle loss is not included in these curves. Both training losses fall steeply during the first 10 epochs and then decrease gradually, ending close to 1.8, with a slightly lower value for YOLOv8n-OBB. The validation losses fluctuate more strongly in the first two thirds of training and settle close to 2.0 for both models in the final epochs. No sustained rise of the validation loss is visible, so the curves give no clear sign of overfitting. The two architectures follow very similar convergence behavior. \tbd{Report the epoch of the best checkpoint of each model.}
+\textcolor{RoyalBlue}{Fig.} \ref{fig:curves} shows the training and validation losses of both models over 100 epochs, computed as the sum of the box, classification, and distribution focal losses. The angle loss is not included in these curves. Both training losses fall steeply during the first 10 epochs and then decrease gradually, ending close to 1.8, with a slightly lower value for YOLOv8n-OBB. The validation losses fluctuate more strongly in the first two thirds of training and settle close to 2.0 for both models in the final epochs. No sustained rise of the validation loss is visible, so the curves give no clear sign of overfitting. The two architectures follow very similar convergence behavior.
 
 \begin{figure}[!t]
 	\centering
@@ -396,7 +385,7 @@ The preprocessing of subswath IW1 produced the elements of the covariance matrix
 	\label{fig:curves}
 \end{figure}
 
-\subsection{Internal Validation on DSSDD}
+\subsection{Evaluation on the DSSDD Test Set}
 \begin{figure*}[!t]
 	\centering
 	\begin{subfigure}{0.45\textwidth}
@@ -409,7 +398,7 @@ The preprocessing of subswath IW1 produced the elements of the covariance matrix
 		\includegraphics[width=\linewidth]{figures/cm_yolo11n.png}
 		\caption{YOLO11n-OBB}
 	\end{subfigure}
-	\caption{Confusion matrices of both models on the DSSDD test set.}
+	\caption{Confusion matrices of both models on the DSSDD test set. Rows show the predicted class and columns the true class; the background--background cell is undefined for detection.}
 	\label{fig:cm}
 \end{figure*}
 
@@ -422,11 +411,11 @@ The preprocessing of subswath IW1 produced the elements of the covariance matrix
 
 \textcolor{RoyalBlue}{Table} \ref{tab:results} compares the detection performance of both models on the DSSDD test set. YOLO11n-OBB obtained higher values on all five metrics: precision (0.9751 against 0.9674), recall (0.9639 against 0.9482), F1-score (0.9695 against 0.9577), mAP@50 (0.9895 against 0.9881), and mAP@50:95 (0.8248 against 0.8123). The largest gain is in recall, at 1.57 percentage points, followed by mAP@50:95 at 1.25 points and F1-score at 1.18 points, while mAP@50 differs by only 0.14 points. On this benchmark, YOLO11n-OBB therefore misses fewer ships and localizes them slightly more tightly at the reported operating point. The margins are small and come from a single run of each model, so repeated runs with different seeds would be needed to confirm them.
 
-\textcolor{RoyalBlue}{Fig.} \ref{fig:cm} shows the confusion matrices of both models for the 1,139 ship instances of the DSSDD test set. YOLOv8n-OBB detected 1,131 ships, missed 8, and produced 512 false positives, whereas YOLO11n-OBB detected 1,132 ships, missed 7, and produced 350 false positives. The number of missed ships is therefore almost identical, and the main difference is that YOLO11n-OBB produced 162 fewer false positives. These counts depend on the confidence threshold used to build the matrices and are not directly comparable with precision and recall reported at a different operating point. \tbd{State the confidence and matching thresholds of the confusion matrices.}
+\textcolor{RoyalBlue}{Fig.} \ref{fig:cm} shows the confusion matrices of both models for the 1,139 ship instances of the DSSDD test set. YOLOv8n-OBB detected 1,131 ships, missed 8, and produced 512 false positives, whereas YOLO11n-OBB detected 1,132 ships, missed 7, and produced 350 false positives. The number of missed ships is therefore almost identical, and the main difference is that YOLO11n-OBB produced 162 fewer false positives. Both matrices were computed with Ultralytics 8.4.218 at a confidence threshold of 0.001 and a ProbIoU matching threshold of 0.5. These counts are therefore not directly comparable with precision and recall in Table \ref{tab:results}, which are reported at the confidence that maximizes the F1-score.
 
 \begin{table}[h!]
 	\centering
-	\caption{INTERNAL VALIDATION ON THE DSSDD TEST SET}
+	\caption{EVALUATION ON THE DSSDD TEST SET}
 	\begin{footnotesize}
 	\begin{tabular}{lcc}
 		\hline
@@ -444,10 +433,10 @@ The preprocessing of subswath IW1 produced the elements of the covariance matrix
 \end{table}
 
 \subsection{Qualitative Analysis}
-\textcolor{RoyalBlue}{Fig.} \ref{fig:qual} compares the reference annotation with the detections of both models on a representative chip containing several offshore ships. Both models locate the clearly visible annotated ships with boxes that follow their orientation, including a ship with strong cross-shaped sidelobes, and most confidence values lie between 0.83 and 0.91. A ship truncated at the lower right corner receives the lowest confidence in both models (0.66 for YOLOv8n-OBB and 0.54 for YOLO11n-OBB). Visually, the two models differ little on this example, so a single chip cannot rank them. Small targets \cite{zhang2020lsssdd}, reported as a difficult case in previous studies, are not represented well by this chip, and complex inshore backgrounds \cite{yao2026fsmd} are examined on the Makassar Strait data in \textcolor{RoyalBlue}{Fig.} \ref{fig:extqual}.
+\textcolor{RoyalBlue}{Fig.} \ref{fig:qual} compares the reference annotation with the detections of both models on a representative chip containing several offshore ships. The chip is part of the DSSDD test set and contains 14 reference boxes, and the detections are shown at a confidence threshold of 0.25. Both models locate the annotated ships with boxes that follow their orientation, including a ship with strong cross-shaped sidelobes, and most confidence values lie between 0.83 and 0.91. Each model also returns one box at the lower right corner of the chip, where a bright pixel cluster is cut by the chip border and no reference box exists, with the lowest confidence (0.66 for YOLOv8n-OBB and 0.54 for YOLO11n-OBB). Visually, the two models differ little on this example, so a single chip cannot rank them. Small targets \cite{zhang2020lsssdd}, reported as a difficult case in previous studies, are not represented well by this chip, and complex inshore backgrounds \cite{yao2026fsmd} are examined on the Makassar Strait data in \textcolor{RoyalBlue}{Fig.} \ref{fig:extqual}.
 
 \subsection{Computational Efficiency}
-\textcolor{RoyalBlue}{Table} \ref{tab:eff} lists the model complexity and inference speed. The parameter counts and floating-point operations (FLOPs) refer to the fused models at an input size of $640 \times 640$ pixels. YOLO11n-OBB has 13.8\% fewer parameters and requires 20.5\% fewer FLOPs than YOLOv8n-OBB. Lower complexity does not by itself imply faster inference, so speed has to be measured on the same hardware and data. \tbd{Benchmark both models with the same images, batch size, and device, report FPS and the hardware used, and discuss the accuracy--speed trade-off.}
+\textcolor{RoyalBlue}{Table} \ref{tab:eff} lists the model complexity and inference speed. The parameter counts and floating-point operations (FLOPs) refer to the fused models at an input size of $640 \times 640$ pixels. YOLO11n-OBB has 13.8\% fewer parameters and requires 20.5\% fewer FLOPs than YOLOv8n-OBB. Lower complexity does not by itself imply faster inference, so speed has to be measured on the same hardware and data. Measured with Ultralytics 8.4.202 on an NVIDIA L4 GPU with a batch size of 16 and an input size of $640 \times 640$ pixels during the DSSDD test evaluation, the total time per image for preprocessing, inference, and postprocessing was 5.0\,ms for YOLOv8n-OBB and 5.1\,ms for YOLO11n-OBB, corresponding to 200 and 196 frames per second (FPS). The difference of about 2\% comes from a single run at a confidence threshold of 0.001 and does not indicate a speed advantage of either model. The lower parameter count and FLOPs of YOLO11n-OBB therefore did not translate into faster inference in this measurement.
 
 \begin{table}[h!]
 	\centering
@@ -457,8 +446,8 @@ The preprocessing of subswath IW1 produced the elements of the covariance matrix
 		\hline
 		\textbf{Model} & \textbf{Params (M)} & \textbf{FLOPs (G)} & \textbf{FPS} \\
 		\hline
-		YOLOv8n-OBB & 3.077 & 8.3 & \tbd{--} \\
-		YOLO11n-OBB & 2.654 & 6.6 & \tbd{--} \\
+		YOLOv8n-OBB & 3.077 & 8.3 & 200 \\
+		YOLO11n-OBB & 2.654 & 6.6 & 196 \\
 		\hline
 	\end{tabular}
 	\label{tab:eff}
@@ -478,26 +467,26 @@ The preprocessing of subswath IW1 produced the elements of the covariance matrix
 		\includegraphics[width=\linewidth]{figures/ext_cm_yolo11n.png}
 		\caption{YOLO11n-OBB}
 	\end{subfigure}
-	\caption{Confusion matrices of both models on the Makassar Strait data.}
+	\caption{Confusion matrices of both models on the Makassar Strait data. Rows show the predicted class and columns the true class; the background--background cell is undefined for detection.}
 	\label{fig:extcm}
 \end{figure*}
 
 \begin{figure*}[!t]
 	\centering
 	\includegraphics[width=\textwidth]{figures/ext_qualitative.png}
-	\caption{Reference annotation and detections of YOLOv8n-OBB and YOLO11n-OBB on a coastal chip of the Makassar Strait data.}
+	\caption{Reference annotation and detections of YOLOv8n-OBB and YOLO11n-OBB on a coastal chip of Scene 10 of the Makassar Strait data.}
 	\label{fig:extqual}
 \end{figure*}
 
-\textcolor{RoyalBlue}{Table} \ref{tab:external} reports the detection performance of both models on Sentinel-1 data of the Makassar Strait, evaluated against oriented bounding boxes created by the authors. YOLOv8n-OBB obtained higher recall (0.8764 against 0.8275), F1-score (0.8694 against 0.8629), and mAP@50 (0.9221 against 0.9104). YOLO11n-OBB obtained higher precision (0.9015 against 0.8625) and a slightly higher mAP@50:95 (0.6252 against 0.6205). Neither model is therefore better on all metrics. The largest differences appear in recall and precision, which indicates that on these data YOLOv8n-OBB misses fewer ships, whereas YOLO11n-OBB produces a smaller share of false detections at the reported operating point. The differences in F1-score and mAP@50:95 are below one percentage point and come from a single evaluation, so they should not be read as a clear advantage of either model.
+\textcolor{RoyalBlue}{Table} \ref{tab:external} reports the detection performance of both models on Sentinel-1 data of the Makassar Strait, evaluated against oriented bounding boxes created by the authors on 255 tiles from ten acquisitions. YOLOv8n-OBB obtained higher recall (0.8764 against 0.8275), F1-score (0.8694 against 0.8629), and mAP@50 (0.9221 against 0.9104). YOLO11n-OBB obtained higher precision (0.9015 against 0.8625) and a slightly higher mAP@50:95 (0.6252 against 0.6205). Neither model is therefore better on all metrics. The largest differences appear in recall and precision, which indicates that on these data YOLOv8n-OBB misses fewer ships, whereas YOLO11n-OBB produces a smaller share of false detections at the reported operating point. The differences in F1-score and mAP@50:95 are below one percentage point and come from a single evaluation, so they should not be read as a clear advantage of either model.
 
-Compared with the internal results in Table \ref{tab:results}, both models lose performance on the Makassar Strait data. From the DSSDD test set to the study area, the F1-score falls by 8.83 percentage points for YOLOv8n-OBB and 10.66 points for YOLO11n-OBB, and mAP@50:95 falls by 19.18 and 19.96 points, respectively. The recall of YOLO11n-OBB drops by 13.64 points against 7.18 points for YOLOv8n-OBB, whereas its precision drops less (7.36 against 10.49 points). As a result, the advantage of YOLO11n-OBB observed on DSSDD is not preserved on all metrics in the study area. The much larger loss in mAP@50:95 than in mAP@50 (6.60 and 7.91 points) suggests that box localization under strict overlap thresholds is affected most, which may reflect differences in preprocessing, acquisition conditions, or annotation style; the present experiment cannot separate these factors. \tbd{Confirm that the internal and external results were computed with the same evaluator and thresholds.}
+Compared with the DSSDD results in Table \ref{tab:results}, both models lose performance on the Makassar Strait data. From the DSSDD test set to the study area, the F1-score falls by 8.83 percentage points for YOLOv8n-OBB and 10.66 points for YOLO11n-OBB, and mAP@50:95 falls by 19.18 and 19.96 points, respectively. The recall of YOLO11n-OBB drops by 13.64 points against 7.18 points for YOLOv8n-OBB, whereas its precision drops less (7.36 against 10.49 points). As a result, the advantage of YOLO11n-OBB observed on DSSDD is not preserved on all metrics in the study area. The much larger loss in mAP@50:95 than in mAP@50 (6.60 and 7.91 points) suggests that box localization under strict overlap thresholds is affected most, which may reflect differences in preprocessing, acquisition conditions, or annotation style; the present experiment cannot separate these factors. Both datasets were evaluated with the same Ultralytics evaluator (version 8.4.218 for the Makassar Strait data), a confidence threshold of 0.001, and a non-maximum suppression threshold of 0.5; rerunning the DSSDD test with this version on a CPU gave the same values to three decimals.
 
-\textcolor{RoyalBlue}{Fig.} \ref{fig:extcm} shows the confusion matrices for the 458 reference ships. YOLOv8n-OBB detected 445 ships, missed 13, and produced 451 false positives, whereas YOLO11n-OBB detected 439 ships, missed 19, and produced 392 false positives. YOLOv8n-OBB therefore found six more ships, while YOLO11n-OBB produced 59 fewer false positives.
+\textcolor{RoyalBlue}{Fig.} \ref{fig:extcm} shows the confusion matrices for the 458 reference ships. YOLOv8n-OBB detected 445 ships, missed 13, and produced 451 false positives, whereas YOLO11n-OBB detected 439 ships, missed 19, and produced 392 false positives. YOLOv8n-OBB therefore found six more ships, while YOLO11n-OBB produced 59 fewer false positives. As in Fig. \ref{fig:cm}, these matrices were computed at a confidence threshold of 0.001 and a ProbIoU threshold of 0.5, so they are not comparable with the precision and recall in Table \ref{tab:external}; the matrix counts correspond to precisions of 0.50 and 0.53.
 
-\textcolor{RoyalBlue}{Fig.} \ref{fig:extqual} shows a coastal chip with 14 reference boxes. On this chip, YOLO11n-OBB detects all 14 annotated ships and YOLOv8n-OBB detects 10. Both models also return detections without a reference box, five for YOLOv8n-OBB and four for YOLO11n-OBB. One of them lies on the harbor structure, and most of the others lie on compact bright targets that resemble ships but are not annotated. If such targets are ships, they are counted as false positives and lower the measured precision. This single chip favors YOLO11n-OBB although the aggregated recall favors YOLOv8n-OBB, so it should not be used to rank the models.
+\textcolor{RoyalBlue}{Fig.} \ref{fig:extqual} shows a coastal chip from Scene 10 with 14 reference boxes, with detections at a confidence threshold of 0.25. On this chip, YOLO11n-OBB detects all 14 annotated ships and YOLOv8n-OBB detects 10. Both models also return detections without a reference box, five for YOLOv8n-OBB and four for YOLO11n-OBB. One of them lies on the harbor structure, and most of the others lie on compact bright targets that resemble ships but are not annotated. If such targets are ships, they are counted as false positives and lower the measured precision. This single chip favors YOLO11n-OBB although the aggregated recall favors YOLOv8n-OBB, so it should not be used to rank the models.
 
-\tbd{Review the unannotated bright targets and recompute the external metrics if the labels change. State which subswaths, acquisitions, and number of tiles were annotated, and which model checkpoints were evaluated.}
+The Makassar Strait set comprises 255 annotated tiles with 458 reference ships from ten acquisitions (Table \ref{tab:scenes}), and both models were evaluated with the best checkpoints of the 100-epoch training runs. The tiles are unevenly distributed: four scenes (05, 06, 08, and 10) provide 218 of the 255 tiles and 420 of the 458 ships, whereas Sentinel-1C provides only 20 tiles and 21 ships. The results are therefore dominated by a few Sentinel-1D scenes and do not allow a comparison between the two satellites. Every tile contains at least one ship, so the false-positive counts do not include false alarms on tiles of empty sea or land.
 
 \begin{table}[h!]
 	\centering
@@ -518,66 +507,19 @@ Compared with the internal results in Table \ref{tab:results}, both models lose 
 	\end{footnotesize}
 \end{table}
 
-\subsection{Detections in Subswath IW1}
-\textcolor{RoyalBlue}{Fig.} \ref{fig:makassar} shows the detections of both models on subswath IW1, and \textcolor{RoyalBlue}{Table} \ref{tab:makassar} summarizes the detections before and after the merging of overlapping tiles. \tbd{Describe the spatial distribution of the detections and any false alarms found by visual inspection, e.g. on land or coastal structures.}
-
-\begin{figure}[h]
-	\centering
-	\fbox{\parbox[c][3.2cm][c]{0.9\columnwidth}{\centering\footnotesize [Placeholder: Sentinel-1 IW1 scene of the Makassar Strait with detections of both models and enlarged sub-areas]}}
-	\caption{Detection results on the Sentinel-1 acquisition of the Makassar Strait.}
-	\label{fig:makassar}
-\end{figure}
-
-\begin{table}[h!]
-	\centering
-	\caption{DETECTIONS IN SUBSWATH IW1 OF THE MAKASSAR STRAIT}
-	\begin{footnotesize}
-	\begin{tabular}{lcc}
-		\hline
-		\textbf{Indicator} & \textbf{YOLOv8n-OBB} & \textbf{YOLO11n-OBB} \\
-		\hline
-		Detections before merging & \tbd{--} & \tbd{--} \\
-		Detections after merging & \tbd{--} & \tbd{--} \\
-		Median confidence & \tbd{--} & \tbd{--} \\
-		\hline
-	\end{tabular}
-	\label{tab:makassar}
-	\end{footnotesize}
-\end{table}
-
-\subsection{Inter-Model Agreement}
-A detection is counted as matched when its ProbIoU with at least one detection of the other model exceeds 0.3, and the agreement rate of a model is the share of its detections that are matched. \textcolor{RoyalBlue}{Table} \ref{tab:agreement} reports the result. Agreement shows that both models respond to the same object, but it does not show that the object is a ship. \tbd{Discuss the matched and unmatched detections after visual inspection.}
-
-\begin{table}[h!]
-	\centering
-	\caption{AGREEMENT BETWEEN THE TWO MODELS}
-	\begin{footnotesize}
-	\begin{tabular}{lcc}
-		\hline
-		\textbf{Indicator} & \textbf{YOLOv8n-OBB} & \textbf{YOLO11n-OBB} \\
-		\hline
-		Matched detections & \tbd{--} & \tbd{--} \\
-		Unmatched detections & \tbd{--} & \tbd{--} \\
-		Agreement rate (\%) & \tbd{--} & \tbd{--} \\
-		\hline
-	\end{tabular}
-	\label{tab:agreement}
-	\end{footnotesize}
-\end{table}
-
 \subsection{Discussion and Limitations}
 On DSSDD, YOLO11n-OBB was slightly more accurate and lighter, but the margins come from a single run. On the Makassar Strait data neither model was better on all metrics. The YOLO11 changes (C3k2 and C2PSA) therefore did not give a consistent benefit under this protocol.
 
 Published results give context but are not directly comparable with those of this study, because datasets and settings differ. A comparison of YOLOv10 and YOLOv11 on the HRSID, RSDD, and SSDD datasets reported consistently better results for YOLOv11 \cite{cavli2025}. Other studies modified the architectures to improve SAR ship detection, building on YOLOv8 \cite{gao2025styolov8,li2025rsabm} or on YOLO11 \cite{li2026acmix,wan2026msadet}. The present comparison instead keeps both OBB baselines unmodified, so that observed differences can be attributed to the two architectures under one protocol. Reducing complexity is also an explicit goal of lightweight oriented ship detectors for SAR images \cite{meng2024lsrdet} and of YOLO11-based oriented detectors for remote sensing images \cite{huang2024lwyolo11}; the reduction in complexity reported in this study comes from the choice of baseline architecture, without further modification.
 
-The comparison should be read with the following limitations in mind. First, DSSDD is relatively small, so differences of a few percentage points may fall within run-to-run variation; repeated runs with different seeds are therefore advisable. Second, all chips used here contain at least one ship, so the benchmark does not measure false alarms on empty sea or land. Third, it was not verified whether chips cut from the same source image appear in more than one subset, which would make the test results optimistic. Fourth, although the study area data are SLC products like DSSDD, the number of looks, the channel assignment, and the quantization limits were reconstructed, so a domain shift caused by preprocessing cannot be separated from one caused by the study area \cite{tu2025mamba,yang2024uda}. Fifth, only one subswath of one acquisition was analyzed and no land mask was applied. Finally, the reference annotations of the study area were created by the authors without AIS confirmation, so missed or incorrect labels may affect the external results. Future work may address these limitations by extending the annotation to more Sentinel-1 scenes of Indonesian waters, applying domain adaptation, for which knowledge transfer from optical to SAR images is one option \cite{wang2026o2s}, and integrating AIS for validation \cite{pelich2019}.
+The comparison should be read with the following limitations in mind. First, DSSDD is relatively small, so differences of a few percentage points may fall within run-to-run variation; repeated runs with different seeds are therefore advisable. Second, all DSSDD chips and all 255 Makassar Strait tiles contain at least one ship, so neither evaluation measures false alarms on images of empty sea or land. Third, it was not verified whether chips cut from the same source image appear in more than one subset, which would make the test results optimistic. Fourth, although the study area data are SLC products like DSSDD, the number of looks, the channel assignment, and the quantization limits were reconstructed, so a domain shift caused by preprocessing cannot be separated from one caused by the study area \cite{tu2025mamba,yang2024uda}. Fifth, the 255 tiles come from ten acquisitions, but four scenes provide 92\% of the reference ships, only 20 tiles come from Sentinel-1C, one scene was acquired at a different time of day, and no land mask was applied. Compact bright targets that resemble ships but are not annotated were not reviewed and may be unlabeled ships; if so, the precision is underestimated. Finally, the reference annotations of the study area were created by the authors without AIS confirmation or independent review, so missed or incorrect labels may affect the external results. Future work may address these limitations by extending the annotation to more Sentinel-1 scenes of Indonesian waters, applying domain adaptation, for which knowledge transfer from optical to SAR images is one option \cite{wang2026o2s}, and integrating AIS for validation \cite{pelich2019}.
 
 %=================================================================
 \section{CONCLUSIONS}
 This study compared YOLOv8n-OBB and YOLO11n-OBB for oriented ship detection in Sentinel-1 SAR imagery under an identical training and evaluation protocol on DSSDD and applied both models to Sentinel-1 data of the Makassar Strait within ALKI II. On DSSDD, YOLO11n-OBB obtained the higher mAP@50:95 (0.825 against 0.812) with fewer parameters and FLOPs, whereas on the Makassar Strait data YOLOv8n-OBB had the higher recall and YOLO11n-OBB the higher precision. Neither model can therefore be recommended over the other on the present evidence. Future work will focus on extending and independently verifying annotated Sentinel-1 data for Indonesian waters, reducing the domain gap between public datasets and operational scenes, and combining SAR detections with AIS to support the identification of non-reporting vessels.
 
 \section*{FUNDING}
-\tbd{State the funding source and grant number, or write: This research received no external funding.}
+
 
 \section*{ACKNOWLEDGMENT}
 The authors thank the European Space Agency and the Copernicus program for providing Sentinel-1 data, and the authors of DSSDD for making the dataset publicly available.
@@ -610,9 +552,9 @@ The authors declare no conflict of interest.
 
 	\bibitem{guo2022lmsd} Y. Guo, S. Chen, R. Zhan, W. Wang, and J. Zhang, ``LMSD-YOLO: A Lightweight YOLO Algorithm for Multi-Scale SAR Ship Detection,'' \emph{Remote Sensing}, vol. 14, no. 19, Art. no. 4801, 2022, \url{https://doi.org/10.3390/rs14194801}.
 
-	\bibitem{yolov8} G. Jocher, A. Chaurasia, and J. Qiu, ``Ultralytics YOLOv8,'' version 8.0.0, 2023. [Online]. Available: \url{https://github.com/ultralytics/ultralytics}
+	\bibitem{yolov8} G. Jocher, A. Chaurasia, and J. Qiu, ``Ultralytics YOLOv8,'' 2023. [Online]. Available: \url{https://github.com/ultralytics/ultralytics}
 
-	\bibitem{yolo11} G. Jocher and J. Qiu, ``Ultralytics YOLO11,'' version 11.0.0, 2024. [Online]. Available: \url{https://github.com/ultralytics/ultralytics}
+	\bibitem{yolo11} G. Jocher and J. Qiu, ``Ultralytics YOLO11,'' 2024. [Online]. Available: \url{https://github.com/ultralytics/ultralytics}
 
 	\bibitem{he2024rotsurvey} J. He and K. L. E. Law, ``Deep Learning Models for Rotated Object Detection in Aerial Images: Survey and Performance Comparisons,'' \emph{IEEE Access}, vol. 12, pp. 180436--180457, 2024, \url{https://doi.org/10.1109/access.2024.3509745}.
 
@@ -640,13 +582,13 @@ The authors declare no conflict of interest.
 
 	\bibitem{shin2025} D.-W. Shin, C.-S. Yang, and A. Marino, ``Small Fishing Vessel Detection Using Polarimetric Observables Fusion With Dual-Polarization Sentinel-1 SAR Data,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 18, pp. 27828--27839, 2025, \url{https://doi.org/10.1109/jstars.2025.3624445}.
 
+	\bibitem{ge2024} L. Ge and L. Dou, ``Non-Maximum Suppression for Rotated Object Detection During Merging Slices of High-Resolution Images,'' \emph{IEEE Access}, vol. 12, pp. 149999--150007, 2024, \url{https://doi.org/10.1109/access.2024.3470815}.
+
 	\bibitem{li2025obbcont} P. Li, C. Feng, W. Feng, and X. Hu, ``Oriented Bounding Box Representation Based on Continuous Encoding in Oriented SAR Ship Detection,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 18, pp. 6350--6362, 2025, \url{https://doi.org/10.1109/jstars.2025.3541217}.
 
 	\bibitem{murrugarra2024probiou} J. Murrugarra-Llerena, L. N. Kirsten, L. F. Zeni, and C. R. Jung, ``Probabilistic Intersection-Over-Union for Training and Evaluation of Oriented Object Detectors,'' \emph{IEEE Transactions on Image Processing}, vol. 33, pp. 671--681, 2024, \url{https://doi.org/10.1109/tip.2023.3348697}.
 
 	\bibitem{padilla2021} R. Padilla, W. L. Passos, T. L. B. Dias, S. L. Netto, and E. A. B. da Silva, ``A Comparative Analysis of Object Detection Metrics with a Companion Open-Source Toolkit,'' \emph{Electronics}, vol. 10, no. 3, Art. no. 279, 2021, \url{https://doi.org/10.3390/electronics10030279}.
-
-	\bibitem{ge2024} L. Ge and L. Dou, ``Non-Maximum Suppression for Rotated Object Detection During Merging Slices of High-Resolution Images,'' \emph{IEEE Access}, vol. 12, pp. 149999--150007, 2024, \url{https://doi.org/10.1109/access.2024.3470815}.
 
 	\bibitem{pelich2019} R. Pelich \textit{et al.}, ``Large-Scale Automatic Vessel Monitoring Based on Dual-Polarization Sentinel-1 and AIS Data,'' \emph{Remote Sensing}, vol. 11, no. 9, Art. no. 1078, 2019, \url{https://doi.org/10.3390/rs11091078}.
 
@@ -662,7 +604,7 @@ The authors declare no conflict of interest.
 
 	\bibitem{meng2024lsrdet} F. Meng, X. Qi, and H. Fan, ``LSR-Det: A Lightweight Detector for Ship Detection in SAR Images Based on Oriented Bounding Box,'' \emph{Remote Sensing}, vol. 16, no. 17, Art. no. 3251, 2024, \url{https://doi.org/10.3390/rs16173251}.
 
-	\bibitem{huang2024lwyolo11} J. Huang, K. Wang, Y. Hou, and J. Wang, ``LW-YOLO11: A Lightweight Arbitrary-Oriented Ship Detection Method Based on Improved YOLO11,'' \emph{Sensors}, vol. 25, no. 1, Art. no. 65, 2024, \url{https://doi.org/10.3390/s25010065}.
+	\bibitem{huang2024lwyolo11} J. Huang, K. Wang, Y. Hou, and J. Wang, ``LW-YOLO11: A Lightweight Arbitrary-Oriented Ship Detection Method Based on Improved YOLO11,'' \emph{Sensors}, vol. 25, no. 1, Art. no. 65, 2025, \url{https://doi.org/10.3390/s25010065}.
 
 	\bibitem{wang2026o2s} S. Wang, Y. Huang, P. Wang, L. Lu, and H. Huang, ``Optical-to-SAR domain adaptation with inversion regularization for unsupervised ship detection,'' \emph{Knowledge-Based Systems}, vol. 334, Art. no. 115044, 2026, \url{https://doi.org/10.1016/j.knosys.2025.115044}.
 \end{thebibliography}
